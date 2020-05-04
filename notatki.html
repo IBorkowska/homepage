@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700Roboto:300,400,500,700&display=swap"
+        rel="stylesheet">
+    <title>WTF - Iva Borkowska</title>
+</head>
+<body>
+    <header>
+        
+        <nav>
+            <a href="index.html">Strona główna</a>
+            <a href="notatki.html">Notatki</a>
+            <a href="nauka-html.html">HTML</a>
+            <a href="nauka-css.html">CSS</a>
+            <a href="nauka-js.html">JavaScript</a>
+            <a href="about-me.html">O mnie</a>
+        </nav>
+        
+    </header>
+    <main>
+        <h1>Iva Borkowska - zapiski przyszłego Frontendowca</h1>
+        <article>
+            <h3>Zasady do zapamiętania</h3>
+            <p class="principle">1. Każda sekcja powinna mieć nagłówek</p>
+        </article>
+
+        <article>
+            <h3 id="definition">Czym jest frontend</h3>
+
+            <h4>Google Trends</h4>
+            <ul>
+                <li>frontend</li>
+                <li>front end</li>
+                <li>front-end</li>
+            </ul>
+            <h4>Frontendowiec:</h4>
+            <ol>
+                <li>Frontned Developer</li>
+                <li>Javascript Developer</li>
+                <li>Content Developer</li>
+                <li>CSS/HTML Developer</li>
+                <li>UI Engineer</li>
+                <li>Full-stack Developer</li>
+                <li>UI Develper</li>
+                <li>Webmaster</li>
+                <li>Web Developer</li>
+            </ol>
+        </article>          
+        
+        <article>
+            <h3 id="naming">Nazywanie rzeczy - reguły</h3>
+            <ul>
+                <li>nazwy zapisujemy bez polskich znaków</li>
+                <li>nie używamy spacji</li>
+                <li>najlepiej używać angielskich słów (treść oczywiście może być w innym języku)</li>
+                <li>trzymamy się jednego schematu (konsekwencja jest istotna)</li>
+            </ul>
+            <h4>Konwencje nazewnictwa</h4>
+            <ul>
+                <li><span>camelCase</span> mySuperBoldHeader</li>
+                <li><span>kebab-case</span> my-super-bold-header</li>
+                <li><span>snake_case</span> my_super_bold_header</li>
+                <li><span>PascalCase</span> MySuperBoldHeader</li>
+            </ul>
+
+            <a href="#top">Wróć na górę strony</a>
+        </article>
+
+        <article>
+            <h3 id="browser">Jak działa przeglądarka</h3>
+            <ol>
+                <li>wpisuję w pasku adresu cotenfrontend.pl [enter]</li>
+                <li>przeglądarka szuka serwera cotenfrontend.pl [DNS]</li>
+                <li>po znalezieniu serwera odpytuje go o index (jeślipodamy sam adres serwera) - to co jest indexem
+                    zależy od konfiguracji serwera (nie musi to być index.html, choć w przypadku stron statycznych jest
+                    to najczęstszy przypadek)</li>
+                <li>serwer wysyła do przeglądarki zawartość html </li>
+                <li>przeglądarka wczytuje html i szuka wszystkich dodatkowych zasobów: style, skrypty, obrazki itp. i
+                    dla każdego z zasobów wykonuje zapytanie</li>
+                <li>Przeglądarka parsuje i renderuje stronę</li>
+            </ol>
+            <h4>SKRÓTY</h4>
+            <ul>
+                <li><span>HTTP</span> - <b>Hypertext Transfer Protocol</b> - Protokół, którego używa przeglądarka 
+                    (w większości przypadków). Protokół do transportowania html-a i całej reszty, którą widzisz na stronach
+                    </li>
+                <li><span>HTTPS</span> - <b>Hypertext Transfer Protocol Secure</b></li>
+                <li><span>URL</span> - <b>Uniform Resource Locator</b></li>
+            </ul>
+        </article>
+
+    <article>
+        <h4>KODY ODPOWIEDZI HTTP</h4>
+    
+<ul>
+    <li><span>1xx</span> - Hold on</li>
+    <li><span>2xx</span> - OK / Here you go</li>
+    <li><span>30x</span> - Szukasz w złym miejscu - przekieruję Cię w dobre (bo wiem gdzie) / Go away</li>
+    <li><span>404</span> - Nie mam tego czego potrzebujesz. Sorry. / You fucked up</li>
+    <li><span>50x</span> - Nie czuję się najlepiej… Błąd wewnętrzny serwera./ I fucked up</li> 
+</ul>
+</article>
+
+<article>
+    <h4>Czym jest root?</h4>
+    <img src="img/url_schemat.png">
+    <img src="img/root-1.png">
+    <img src="img/root-2.png">
+    <img src="img/root-3.png">
+    <img src="img/root-4.png">
+    <img src="img/root-5.png">
+    <img src="img/root-6.png">
+    <img src="img/root-7.png">
+
+</article>
+
+<article><h4>Podsumowanie</h4>
+    <ol>
+        <li>protokół który obsługuje strony internetowe i ich zawartość to HTTP (aktualnie coraz częściej HTTP/2)</li>
+        <li>komunikacja przeglądarka - serwer odbywa się na zasadach request - response</li>
+        <li>odpowiedzi serwera mają różne kody (i pozwala nam to na diagnozowanie problemów)</li>
+        <li>root (/) jest istotną częścią ścieżek do zasobów (i dobrze wiedzieć jak działa :)) </li>
+    </ol>
+
+</article>
+
+
+
+        <article>
+            <h3 id="#"></h3>
+            
+
+            <a href="#top">Wróć na górę strony</a>
+        </article>
+    </main>
+    <footer>
+            Strona domowa Iwony Borkowskiej
+    </footer>
+</body>
+</html>

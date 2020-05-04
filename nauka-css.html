@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700Roboto:300,400,500,700&display=swap"
+        rel="stylesheet">
+    <title>WTF - Iva Borkowska</title>
+</head>
+
+<body>
+    <header>
+        
+        <nav>
+            <a href="index.html">Strona główna</a>
+            <a href="notatki.html">Notatki</a>
+            <a href="nauka-html.html">HTML</a>
+            <a href="nauka-css.html">CSS</a>
+            <a href="nauka-js.html">JavaScript</a>
+            <a href="about-me.html">O mnie</a>
+        </nav>
+        
+    </header>
+    <main id="top">
+        <h1>CSS</h1>
+        <section>
+            <h2><a href="CSS.html">Notatki z CSS</a></h2>
+            <article>
+                <h3>Zasady do zapamiętania</h3>
+                <p class="principle">1. Nie wszystkie zasady w CSS są dziedziczone.</p>
+            </article><br>
+
+            <article>
+                <h3 id="syntax">Składnia CSS</h3>
+
+                <p>selektor {właściwość: wartość;}</p>
+            </article><br>
+            <article>
+                <h3>Gramatyka CSS</h3>
+                <ul>
+                    <li>piszemy małymi literami</li>
+                    <li>średnik na końcu instrukcji</li>
+                    <li>dwukropek rozdziela własciwość od wartości</li>
+                    <li>komentarz w CSS /*    */ - skrót CTRL + slash</li>
+                    <li>nazwy właściwości piszemy z myślnikiem</li>
+                    <li>atrybut class może mieć przypisaną więcej niż jedną klasę</li>
+                    <li>p.red.big - czytamy weź element p, który ma jednocześnie klasę red i big</li>
+                    <li>RESET: * {margin:0; padding: 0;}</li>
+                </ul>
+               
+            </article>
+            <article>
+                <h3>3 sposoby dodawania stylów</h3>
+                <ul><li><b>liniowo</b> - bezpośrednio w elemencie - &lt;p style="font-size: px; color:red;"&gt; UWAGA! Style 
+                    liniowe są najważniejsze, mają najwyższy priorytet. Z tego sposobu korzystamy w JS i wtedy ten rodzaj 
+                    dodawania stylów jest najbardziej przydatny
+                </li>
+                <li><b> sekcji &lt;head&gt;</b> w znacznikach &lt;style&gt; &lt;/style&gt; Sposób ten warto stosować w trakcie 
+                    nauki CSS. UWAGA! Może być więcej niż jeden znacznik style w head. Może też pojawić się w sekcji body.
+                </li>
+                <li><b>w zewnętrznym pliku</b> - w znaczniku  &lt;link&gt; I to jest najlepszy sposób.</li></ul>
+            </article>
+            <article>
+                <h3 id="classes">Nazewnictwo klas</h3>
+                <ul>
+                    <li>używaj pojedynczych słów z j. angielskiego</li>
+                    <li>nazywaj rzeczy zgodnie z ich funkcją na stronie </li>
+                    <li>startuj z małej litery np. header nie Header</li>
+                    <li>nie zaczynaj od cyfry</li>
+                    <li>jeśli musisz użyć dwóch słów użyj tzw. kebab case np.: news-listing</li>
+                    <li>staraj się, żeby element miał jedną klasę (nie zwiększaj specyficzności bez potrzeby</li>
+                    <li>specyficzność - klasyfikacja medalowa</li>
+                    <li>html class="name" = css .name</li>
+                    <li>html id="name" = css #name</li>
+                    <li>stylujemy po klasach (bez zagnieżdżeń!)</li>
+                    <li>nazywamy klasy po angielsku zgodnie z przeznaczeniem</li>
+                    <li>tworzymy klasy nawet mamy jeden element danego typu</li>
+                    <li>specyficzność może dać popalić ;)</li>
+                    <li>nie używamy !important i stylów inline'owych</li>
+                </ul>
+            </article>
+            <a href="#top">Wróć na górę strony</a>
+        </section>
+
+
+    </main>
+    <footer>
+        Strona domowa Iwony Borkowskiej
+    </footer>
+</body>
+
+</html>
