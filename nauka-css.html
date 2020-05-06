@@ -26,7 +26,7 @@
     <main id="top">
         <h1>CSS</h1>
         <section>
-            <h2><a href="CSS.html">Notatki z CSS</a></h2>
+            <h2><a href="CSS.html" target="_blank">Notatki z CSS</a></h2>
             <article>
                 <h3>Zasady do zapamiętania</h3>
                 <p class="principle">1. Nie wszystkie zasady w CSS są dziedziczone.</p>
@@ -80,6 +80,67 @@
                     <li>specyficzność może dać popalić ;)</li>
                     <li>nie używamy !important i stylów inline'owych</li>
                 </ul>
+            </article>
+            <article>
+                <h3 id="boxmodel">BOX MODEL - Życie w pudełku</h3>
+                <p>Znacznik <div>nie ma znaczenia semantycznego, używamy gdy chcemy coś "opakować" (tylko kiedy 
+                    nie istnieje odpowiedni semantyczny znacznik)</p>
+                    <h4>1. Display, wymiary i overflow</h4>
+                    <h5>Display</h5>
+                    <ul>
+                        <li>
+                            <details>
+                                <summary>display: block;</summary>
+                                    <p>elementy zajmują całą szerokość rodzica, ustawiają / wyświetlają się jeden pod drugim</p>
+                            </detalis>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>display: inline;</summary>
+                                    <p>szerokość elementu z tą właściwością jest równa szerokości jego zawartości, zajmują tyle
+                                        miejsca ile potrzebują, ustawiają się obok siebie w linii, nie jeden pod drugim jak elementy
+                                        blokowe. Tym elementom nie można zdefiniować pożądanej wysokości i szerokości
+                                    </p>
+                            </detalis>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>display: inline-block;</summary>
+                                    <p>elementy zachowują się jak elementy liniowe, ale można im nadać wielkość: szerokość i wysokość</p>
+                            </detalis>
+                        </li>
+                        </ul>
+                        <p><b>display:</b> wyświetlać, wyświetlić (np. na ekranie)</p>
+                        <h5>Wymiary</h5>
+                        <p><b>max-width / max-height </b>(maksymalna szerokość/wysokość jaką element może osiągnąć, 
+                            a domyślnie ma 100%. Z max-height rzadko się korzysta</p>
+                        <p><b>min-width / min-height</b><p>
+
+                            <h5>Overflow</h5>
+                            <p>- pozwala na odcinanie treści, która nam wystaje</p>
+                    <ul>
+                        <li>
+                            <details>
+                                <summary>: hidden;</summary>
+                                    <p>...</p>
+                            </detalis>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>: visible;</summary>
+                                    <p>...</p>
+                            </detalis>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>: auto;</summary>
+                                    <p>- dokłada scroll-a w elemencie, aby móc zobaczyć całą wysokość lub szerokość elementu</p>
+                            </detalis>
+                        </li>
+                    </ul>
+            </article>
+            <article>
+                <h4>1. Display, wymiary i overflow</h4>
             </article>
             <a href="#top">Wróć na górę strony</a>
         </section>

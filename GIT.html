@@ -1,0 +1,663 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>GIT</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="3ed58286-993c-4586-8b37-8069c2bbf64d" class="page sans"><header><div class="page-header-icon undefined"><img class="icon" src="GIT/git-logo.png"/></div><h1 class="page-title">GIT</h1></header><div class="page-body"><p id="601fbb82-e9b8-4e62-877a-3f992a557a31" class="">
+</p><blockquote id="6589dac3-8063-41c5-9763-22cfb3dd68bf" class=""><strong>Repozytorium = projekt = wszystkie plik</strong>i</blockquote><p id="607366d2-f75a-4c72-a342-83b2e1741695" class="">* repozytorium to pojęcie obejmujące pliki projektu oraz zapis historii zmian. To rozwiązanie, które pomaga śledzić zmiany i łączyć kod wielu osób pracujących na projektem. </p><p id="d47c637b-7f69-499c-8fbd-9889bb53ba7c" class="">Sprawna maszyna łącząca pracę wielu deweloperów. Maszyna, która potrafi do tego podróżować w czasie (do poprzednich wersji projektu) oraz podróżować między różnymi światami (przełączanie
+między branch&#x27;ami)</p><p id="f59a58b7-a524-4a73-9129-2083d1ad9a89" class="">
+</p><p id="4703215c-6d11-45e5-8503-1273e1751eaf" class="">Każdy deweloper (czy użytkownik danego repozytorium Gita) ma własne kompletne
+repozytorium na swoim komputerze (repozytorium lokalne). Najczęściej istnieje też
+repozytorium, które określa się jako <strong>główne, centralne czy zdalne</strong> (bo znajduje się na serwerze,
+którym często jest platforma Github).</p><p id="32586d12-5a03-425c-a806-2d91536f2ba9" class="">
+</p><p id="ea3103ee-4853-4ff4-9301-2132a745cc1c" class="">Zmiany w repozytorium lokalnym są łączone z głównym repozytorium, a lokalne repozytorium
+może być aktualizowane o zmiany w globalnym repozytorium. By pracować na projekcie, nie
+jest jednak wymagane stałe połączenie z głównym (zdalnym) repozytorium, ponieważ pracuje
+się na repozytorium lokalnym i tylko synchronizuje się je z głównym.</p><p id="558cd982-feb3-48ac-a18d-e556dbde0cbb" class="">
+</p><p id="d22118fe-52c2-4e1e-b822-075bd6df34f1" class="">Git to (rozproszony) system kontroli wersji.
+Git to najpopularniejszy system kontroli wersji.
+Git to oprogramowanie darmowe oraz open source.
+Git jest lubiany, wydajny, szybki, rozbudowany.</p><h3 id="48ab4f03-411d-424c-a0a5-5ba458207582" class="">Czym jest system kontroli wersji</h3><p id="cdb51afd-457d-4b6f-988c-3c730ebfd244" class=""><em>ang. version control system</em>
+VCS służy do zarządzania projektem w czasie. Tworzy historię
+projektu, pozwala na współpracę wielu osób i łączenie ich pracy</p><p id="3fd5fd36-399c-4657-bf15-259c5cb364a4" class="">
+</p><p id="e9f4e1c3-143e-4d68-8b4f-71bbd4613a62" class="">Jest narzędziem, które umożliwia tworzenie repozytoriów*
+</p><h2 id="c56b977d-5859-4685-86b5-c740508dc351" class="">Polecenia:</h2><p id="e0e8479c-3bfa-485e-bd87-c49c69649228" class="">git init</p><p id="c944e124-a238-42f2-af68-5cccf2cd63b3" class="">ls - pokaż pliki</p><p id="4d0a8038-0a74-416c-9fdc-287649ea4e18" class="">ls -a - pokaż wszystkie pliki</p><p id="74b7a9a2-b491-4279-882f-0d30bcd2c4d8" class="">git status</p><p id="fdccf454-73a6-4d77-86c3-17d919c1f54c" class="">git add .</p><p id="cfc087f9-0b51-4a64-8394-0a8d8878af2b" class="">pwd</p><p id="f24ba074-5bf5-4896-90b3-d1e64917e090" class="">git commit -m &quot;opis zmian&quot;</p><p id="06d638ed-4aa3-4c23-b44d-f22b7300780d" class="">gitk</p><p id="a84f60a8-9442-4cff-9620-cf4bec7729d7" class="">clear - wyczyszczenie okienka terminala</p><p id="f2cb20d9-cdde-435d-a04e-e3a2ee56f4a1" class="">git push - wypchnij commit na GitHub</p><p id="67e0f102-0205-4dc2-a0eb-12a4fdc511ae" class="">
+</p><p id="c3129780-a023-4aed-9682-6301a43afb5c" class="">Jak często commitować - na początku stosunkowo często</p><p id="36f2087f-1dbe-4b04-9ba6-bfd2d08b7934" class="">
+</p><p id="daef002f-4105-4f8e-bc5d-b55376539ba1" class="">git / git lens - rozszerzenie do VSC, ale na razie z niego nie korzystamy</p><p id="1cdc457d-2dc0-40d0-9239-bca3520f81bc" class="">
+</p><blockquote id="48b7c051-1b2b-4e9b-a3bb-f7f6536abd53" class="">Commit = stan projektu i opis tego co się zmieniło od ostatniego zapisu</blockquote><p id="d32ac537-c40a-4409-89bd-28946d475ab0" class="">
+</p><p id="3fd8eb2a-f6d5-4764-8ad6-af2b2ea8e7fb" class="">GitHub != Git - to nie jest to samo!</p><p id="d337e55e-21c2-4d62-884b-8937e36d210d" class="">
+</p><h3 id="7bb40c6e-8a75-4f2b-8e0f-8c20de4ea380" class="">Jak działa Git - commit robi snapshot&#x27;a</h3><p id="99f1cbdf-208d-446c-82aa-695e534e688d" class="">Git robi snapshot&#x27;y i zapisuje je w obiektach repozytorium projektu.
+W pewnym momencie projektu, np. gdy zmodyfikujesz czy dodasz plik(i), możesz zrobić tzw. commit, który jest zapisaniem w repozytorium aktualnego stanu projektu, taką stopklatką czy save&#x27;m (po angielsku nazywa się taki stan snapshot&#x27;em, po polsku czasami tłumaczy się to na migawkę). Taki snapshot zawiera kompletny stan projektu (wszystkich plików) w projekcie.
+I to jest podstawowa, fundamentalna część Gita.</p><p id="7508b0ca-730d-4d6e-be3a-bb11e29b9db4" class="">
+</p><h3 id="06805322-3633-40c9-9247-8b0f364816ea" class="">Czym jest Github?</h3><p id="bc497ad7-86d8-422b-87de-c27607f1e51a" class="">Najpopularniejsza platforma do zdalnego tworzenia i przechowywania repozytorium projektu (opartego na Git). Pełni też rolę backupu oraz udostępnia dodatkowe narzędzia pomagające w
+pracy nad projektem w grupie.</p><p id="f60039eb-ed30-4e96-ae7f-515e07f7188b" class="">
+</p><h3 id="8fae50da-b1d8-4766-8c6c-aac2c0fa331e" class="">Programy wiersza poleceń a Git</h3><p id="42a465c2-55a5-4970-a475-ff900f9c52dd" class="">Git umożliwa pracę zarówno w oparcu o interfejs wiersza poleceń jak i interfejs graficzny. Naukę Gita warto rozpocząć od nauki poleceń Gita a najlepszy sposób to po prostu wpisywanie komend
+do CLI (<strong>CLI - Command Line Interface)</strong>. Popularne programy wiersza poleceń (powłoki tekstowe): Bash, PowerShell, CMD.</p><p id="f501605f-ec4a-4046-b6a9-08554a9fe6f9" class="">
+</p><p id="74b73143-c85f-4c87-b942-cc7de98bba99" class="">Warto wiedzieć, że nie wszystkie komendy w różnych CLI są idenyczne, niektóre interpretery są znacznie uboższe (np. CMD w Windows).
+Użytkownicy systemów Linux i Mac korzystają najczęściej z Basha, użytkownicy Windowsa pracując z Gitem, korzystając z PowerShella lub z Git Basha (specjalna emulacja Basha na Windows, którą dostajemy wraz z instalacją Gita).</p><p id="08da21d6-2d96-4c91-9c60-3d147c43bca0" class="">Git potrzebuje edytora kodu (choć może być i notatnik), nawet jeśli nie korzystamy z interfejsu graficznego (edytory oferują różne dodatki).</p><h3 id="1edeb77f-d716-404e-a865-8b8ad3c3d8c9" class="">Ciekawostki o Git</h3><p id="a84d6bae-e4f8-448a-b6df-7007f694b777" class="">Git powstał w 2005 roku (jego pierwszą wersję stworzył twórca Linuxa Linus Torvald, szwedzkojęzyczny Fin). Git został napisany w języku C. </p><p id="94af4736-8b84-4e2a-9d1f-6c21ef29992c" class="">Używa algorytmu SHA1, co czyni go też bardzo bezpiecznym (hash, identyfikator).
+Przechowywany w katalogu /.git Twojego projektu. Git robi kopię całego projektu (snapshot), a nie tylko zmian. Nazwę Git wymyślił twórca systemu i nazwał go tak, bo taką miał ochotę :) Dziś Git rozszyfrowuje się jako Global Information Tracker (co można przetłumaczyć jako globalny system śledzenia informacji).</p><p id="2447a7f0-5e15-4c28-87c1-ff62c9de91cc" class="">
+</p><h3 id="9823619b-b34e-4308-8877-1b5d6b2569e3" class="">Podsumowanie</h3><p id="ee78c503-2b0e-4b8c-a05f-4cd4613d7e73" class="">
+- GIT pozwala na sprawne zarządzanie zmianami w projekcie
+- Działa lokalnie
+- Do działania zdalnego potrzebuje serwera (np. GitHub)
+- Znajomość podstaw GIT-a jest wymagana niezależnie od technologii
+- Konto na GitHubie jest Twoją programistyczną wizytówką, zadbaj aby była ładna i prawdziwa :)
+- Commitujemy jak dokładamy jakąś widoczną zmianę do projektu (lepiej częściej, niż za mało)
+- <mark class="highlight-red">Podstawowy flow: git add . / git commit -m &quot;opis zmiany&quot; / git push</mark></p><p id="f2cfd35a-ab6d-470b-ba15-3e5cbd496abd" class="">
+</p></div></article></body></html>
