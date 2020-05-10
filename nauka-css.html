@@ -12,7 +12,7 @@
 
 <body>
     <header>
-        
+
         <nav>
             <a href="index.html">Strona główna</a>
             <a href="notatki.html">Notatki</a>
@@ -21,7 +21,7 @@
             <a href="nauka-js.html">JavaScript</a>
             <a href="about-me.html">O mnie</a>
         </nav>
-        
+
     </header>
     <main id="top">
         <h1>CSS</h1>
@@ -43,24 +43,30 @@
                     <li>piszemy małymi literami</li>
                     <li>średnik na końcu instrukcji</li>
                     <li>dwukropek rozdziela własciwość od wartości</li>
-                    <li>komentarz w CSS /*    */ - skrót CTRL + slash</li>
+                    <li>komentarz w CSS /* */ - skrót CTRL + slash</li>
                     <li>nazwy właściwości piszemy z myślnikiem</li>
                     <li>atrybut class może mieć przypisaną więcej niż jedną klasę</li>
                     <li>p.red.big - czytamy weź element p, który ma jednocześnie klasę red i big</li>
                     <li>RESET: * {margin:0; padding: 0;}</li>
                 </ul>
-               
+
             </article>
             <article>
                 <h3>3 sposoby dodawania stylów</h3>
-                <ul><li><b>liniowo</b> - bezpośrednio w elemencie - &lt;p style="font-size: px; color:red;"&gt; UWAGA! Style 
-                    liniowe są najważniejsze, mają najwyższy priorytet. Z tego sposobu korzystamy w JS i wtedy ten rodzaj 
-                    dodawania stylów jest najbardziej przydatny
-                </li>
-                <li><b> sekcji &lt;head&gt;</b> w znacznikach &lt;style&gt; &lt;/style&gt; Sposób ten warto stosować w trakcie 
-                    nauki CSS. UWAGA! Może być więcej niż jeden znacznik style w head. Może też pojawić się w sekcji body.
-                </li>
-                <li><b>w zewnętrznym pliku</b> - w znaczniku  &lt;link&gt; I to jest najlepszy sposób.</li></ul>
+                <ul>
+                    <li><b>liniowo</b> - bezpośrednio w elemencie - &lt;p style="font-size: px; color:red;"&gt; UWAGA!
+                        Style
+                        liniowe są najważniejsze, mają najwyższy priorytet. Z tego sposobu korzystamy w JS i wtedy ten
+                        rodzaj
+                        dodawania stylów jest najbardziej przydatny
+                    </li>
+                    <li><b> sekcji &lt;head&gt;</b> w znacznikach &lt;style&gt; &lt;/style&gt; Sposób ten warto stosować
+                        w trakcie
+                        nauki CSS. UWAGA! Może być więcej niż jeden znacznik style w head. Może też pojawić się w sekcji
+                        body.
+                    </li>
+                    <li><b>w zewnętrznym pliku</b> - w znaczniku &lt;link&gt; I to jest najlepszy sposób.</li>
+                </ul>
             </article>
             <article>
                 <h3 id="classes">Nazewnictwo klas</h3>
@@ -83,61 +89,65 @@
             </article>
             <article>
                 <h3 id="boxmodel">BOX MODEL - Życie w pudełku</h3>
-                <p>Znacznik <div>nie ma znaczenia semantycznego, używamy gdy chcemy coś "opakować" (tylko kiedy 
-                    nie istnieje odpowiedni semantyczny znacznik)</p>
-                    <h4>1. Display, wymiary i overflow</h4>
-                    <h5>Display</h5>
-                    <ul>
-                        <li>
-                            <details>
-                                <summary>display: block;</summary>
-                                    <p>elementy zajmują całą szerokość rodzica, ustawiają / wyświetlają się jeden pod drugim</p>
+                <p>Znacznik <div>nie ma znaczenia semantycznego, używamy gdy chcemy coś "opakować" (tylko kiedy
+                        nie istnieje odpowiedni semantyczny znacznik)</p>
+                <h4>1. Display, wymiary i overflow</h4>
+                <h5>Display</h5>
+                <ul>
+                    <li>
+                        <details>
+                            <summary>display: block;</summary>
+                            <p>elementy zajmują całą szerokość rodzica, ustawiają / wyświetlają się jeden pod drugim</p>
                             </detalis>
-                        </li>
-                        <li>
-                            <details>
-                                <summary>display: inline;</summary>
-                                    <p>szerokość elementu z tą właściwością jest równa szerokości jego zawartości, zajmują tyle
-                                        miejsca ile potrzebują, ustawiają się obok siebie w linii, nie jeden pod drugim jak elementy
-                                        blokowe. Tym elementom nie można zdefiniować pożądanej wysokości i szerokości
-                                    </p>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>display: inline;</summary>
+                            <p>szerokość elementu z tą właściwością jest równa szerokości jego zawartości, zajmują tyle
+                                miejsca ile potrzebują, ustawiają się obok siebie w linii, nie jeden pod drugim jak
+                                elementy
+                                blokowe. Tym elementom nie można zdefiniować pożądanej wysokości i szerokości
+                            </p>
                             </detalis>
-                        </li>
-                        <li>
-                            <details>
-                                <summary>display: inline-block;</summary>
-                                    <p>elementy zachowują się jak elementy liniowe, ale można im nadać wielkość: szerokość i wysokość</p>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>display: inline-block;</summary>
+                            <p>elementy zachowują się jak elementy liniowe, ale można im nadać wielkość: szerokość i
+                                wysokość</p>
                             </detalis>
-                        </li>
-                        </ul>
-                        <p><b>display:</b> wyświetlać, wyświetlić (np. na ekranie)</p>
-                        <h5>Wymiary</h5>
-                        <p><b>max-width / max-height </b>(maksymalna szerokość/wysokość jaką element może osiągnąć, 
-                            a domyślnie ma 100%. Z max-height rzadko się korzysta</p>
-                        <p><b>min-width / min-height</b><p>
+                    </li>
+                </ul>
+                <p><b>display:</b> wyświetlać, wyświetlić (np. na ekranie)</p>
+                <h5>Wymiary</h5>
+                <p><b>max-width / max-height </b>(maksymalna szerokość/wysokość jaką element może osiągnąć,
+                    a domyślnie ma 100%. Z max-height rzadko się korzysta</p>
+                <p><b>min-width / min-height</b>
+                    <p>
 
-                            <h5>Overflow</h5>
-                            <p>- pozwala na odcinanie treści, która nam wystaje</p>
-                    <ul>
-                        <li>
-                            <details>
-                                <summary>: hidden;</summary>
+                        <h5>Overflow</h5>
+                        <p>- pozwala na odcinanie treści, która nam wystaje</p>
+                        <ul>
+                            <li>
+                                <details>
+                                    <summary>: hidden;</summary>
                                     <p>...</p>
-                            </detalis>
-                        </li>
-                        <li>
-                            <details>
-                                <summary>: visible;</summary>
+                                    </detalis>
+                            </li>
+                            <li>
+                                <details>
+                                    <summary>: visible;</summary>
                                     <p>...</p>
-                            </detalis>
-                        </li>
-                        <li>
-                            <details>
-                                <summary>: auto;</summary>
-                                    <p>- dokłada scroll-a w elemencie, aby móc zobaczyć całą wysokość lub szerokość elementu</p>
-                            </detalis>
-                        </li>
-                    </ul>
+                                    </detalis>
+                            </li>
+                            <li>
+                                <details>
+                                    <summary>: auto;</summary>
+                                    <p>- dokłada scroll-a w elemencie, aby móc zobaczyć całą wysokość lub szerokość
+                                        elementu</p>
+                                    </detalis>
+                            </li>
+                        </ul>
             </article>
             <article>
                 <h4>1. Display, wymiary i overflow</h4>
